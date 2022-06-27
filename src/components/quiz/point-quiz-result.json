@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_quiz_point_quiz_results",
+  "info": {
+    "displayName": "point_quiz_result",
+    "icon": "coins"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "min_point": {
+      "type": "integer",
+      "required": true
+    },
+    "max_point": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

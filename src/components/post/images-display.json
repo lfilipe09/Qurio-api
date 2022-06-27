@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_post_images_displays",
+  "info": {
+    "displayName": "images_display",
+    "icon": "images",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "desktop": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "mobile": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

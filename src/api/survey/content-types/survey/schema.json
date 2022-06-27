@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "surveys",
+  "info": {
+    "singularName": "survey",
+    "pluralName": "surveys",
+    "displayName": "survey",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "option": {
+      "displayName": "option",
+      "type": "component",
+      "repeatable": true,
+      "component": "survey.option",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "packs",
+  "info": {
+    "singularName": "pack",
+    "pluralName": "packs",
+    "displayName": "pack",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "chapter": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "release": {
+      "type": "date",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "reading_time": {
+      "type": "integer",
+      "required": true
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post",
+      "mappedBy": "pack"
+    }
+  }
+}

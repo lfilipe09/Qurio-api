@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quizzes",
+  "info": {
+    "singularName": "quiz",
+    "pluralName": "quizzes",
+    "displayName": "quiz",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "question": {
+      "displayName": "question",
+      "type": "component",
+      "repeatable": true,
+      "component": "quiz.question",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "point_quiz_result": {
+      "displayName": "point_quiz_result",
+      "type": "component",
+      "repeatable": true,
+      "component": "quiz.point-quiz-result"
+    },
+    "quiz_type": {
+      "type": "enumeration",
+      "enum": [
+        "Quiz de frequência",
+        "Quiz de pontuação"
+      ],
+      "required": true,
+      "default": "Quiz de frequência"
+    }
+  }
+}

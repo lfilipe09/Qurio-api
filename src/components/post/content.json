@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_post_contents",
+  "info": {
+    "displayName": "content",
+    "icon": "align-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    },
+    "images_display": {
+      "displayName": "images_display",
+      "type": "component",
+      "repeatable": true,
+      "component": "post.images-display"
+    },
+    "quizzes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::quiz.quiz"
+    },
+    "surveys": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::survey.survey"
+    }
+  }
+}
