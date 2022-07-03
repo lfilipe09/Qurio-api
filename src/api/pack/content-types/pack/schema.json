@@ -12,11 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "chapter": {
-      "type": "integer",
-      "required": true,
-      "default": 1
-    },
     "release": {
       "type": "date",
       "required": true
@@ -25,9 +20,10 @@
       "type": "richtext",
       "required": true
     },
-    "reading_time": {
+    "reading_hours": {
       "type": "integer",
-      "required": true
+      "required": true,
+      "max": 23
     },
     "cover": {
       "type": "media",
@@ -46,6 +42,32 @@
       "relation": "oneToMany",
       "target": "api::post.post",
       "mappedBy": "pack"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "authors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::author.author",
+      "inversedBy": "packs"
+    },
+    "group_pack": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::group-pack.group-pack",
+      "inversedBy": "packs"
+    },
+    "chapter": {
+      "type": "integer",
+      "default": 1
+    },
+    "reading_minutes": {
+      "type": "integer",
+      "max": 59,
+      "required": true
     }
   }
 }

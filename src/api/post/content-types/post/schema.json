@@ -44,11 +44,11 @@
     },
     "origin_url": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "reference": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "category": {
       "type": "relation",
@@ -72,12 +72,25 @@
       "displayName": "content",
       "type": "component",
       "repeatable": true,
-      "component": "post.content"
+      "component": "post.content",
+      "required": true
     },
     "pack": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::pack.pack",
+      "inversedBy": "posts"
+    },
+    "formats": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::format.format",
+      "inversedBy": "posts"
+    },
+    "authors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::author.author",
       "inversedBy": "posts"
     }
   }
